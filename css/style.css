@@ -47,7 +47,11 @@ body.fixed .fixed_background{
 /* left_link */
 
 #left_link{
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 55px;
+    height: 100%;
     box-sizing: border-box;
     border-right: 1px solid #e0e0e0;
 }
@@ -122,7 +126,9 @@ body.fixed .fixed_background{
 /* content_box */
 
 #content_box{
-    width: calc(100% - 55px);
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 55px;
 }
 
 /* header */
