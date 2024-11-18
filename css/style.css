@@ -52,6 +52,73 @@ body.fixed .fixed_background{
     border-right: 1px solid #e0e0e0;
 }
 
+.left_character{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 0 0 3px;
+    margin-bottom: 15px;
+}
+
+.give_link{
+    width: 100%;
+}
+
+.give_link a{
+    position: relative;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    writing-mode: vertical-rl;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    font-size: 15px;
+    padding-bottom: 22px;
+}
+
+.give_link a span:first-child{
+    color: #494949;
+}
+
+.give_link a:focus:first-child,
+.give_link a:hover:first-child{
+    color: #000;
+}
+
+.give_link a span:last-child{
+    display: inline-block;
+    margin-top: 12px;
+    color: #2398d1;
+}
+
+.give_link a::after{
+    display: none;
+    content: url('../img/btn_arrow.png');
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.give_link a:focus::after,
+.give_link a:hover::after{
+    display: block;
+    animation: arrowMove infinite 0.8s ease;
+}
+
+@keyframes arrowMove{
+    0%{
+        transform: translateX(-50%);
+    }
+
+    50%{
+        transform: translateX(-30%);
+    }
+
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
 /* content_box */
 
 #content_box{
@@ -218,6 +285,23 @@ body.fixed .fixed_background{
     height: 4px;
     background: #34b6ff;
     border-radius: 50%;
+}
+
+.mn_floor2 > li > a span::after{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #246eae;
+    transition: all .3s ease;
+}
+
+.mn_floor2 > li > a:focus span::after,
+.mn_floor2 > li > a:hover span::after{
+    width: 100%;
 }
 
 .header_right{
@@ -726,10 +810,43 @@ body.fixed .fixed_background{
 }
 
 .main_article_txt h2 strong{
+    position: relative;
     display: inline-block;
     word-break: keep-all;
     line-height: 1.2;
     letter-spacing: -1px;
+    z-index: 2;
+}
+
+.main_article_txt h2 strong::after{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 15px;
+    background: #cedced;
+    opacity: 0.4;
+    transition: all .5s ease;
+    z-index: -1;
+}
+
+.main_article.type3 .main_article_txt h2 strong::after{
+    display: none;
+}
+
+.main_article.color1 .main_article_txt h2 strong::after{
+    opacity: 0.2;
+}
+
+.main_article.color2 .main_article_txt h2 strong::after{
+    opacity: 0.3;
+}
+
+.main_article article a:hover .main_article_txt h2 strong::after,
+.main_article article a:focus .main_article_txt h2 strong::after{
+    width: 100%;
 }
 
 .main_article_txt p{
