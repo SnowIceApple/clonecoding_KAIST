@@ -32,7 +32,7 @@ $(document).ready(function(){
         $('.main_search').stop().slideDown(150);
         $('#header').css('padding-bottom', 60 + 'px');
         $(this).children('.hidden_text').text('검색창 닫기');
-        $('.all_menu_open a').children('.hidden_text').text('검색창 열기');
+        $('.all_menu_open a').children('.hidden_text').text('전체메뉴 열기');
         $('body').addClass('fixed');
         if($(this).hasClass('active') == false){
             $('.main_search').stop().slideUp(150);
