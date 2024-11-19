@@ -93,4 +93,35 @@ $(document).ready(function(){
             $('.all_menu').focus();
         }
     });
+
+
+
+    $(window).on('scroll', function(){
+
+        var ftNavAnchor = $('.main_article_floor').last().offset().top + $('.main_article_floor').last().height();
+        var scrollBottom = $('body').height() - $(window).height() - $(window).scrollTop();
+        var lastAnchor = $(document).innerHeight() - $('#divide_box').height();
+        // console.log(lastAnchor);
+        // console.log(scrollBottom);
+        // console.log(ftNavAnchor);
+        if($(window).scrollTop() > 0){
+            $('.main_left_menu').addClass('active');
+            $('.footer_nav').addClass('active');
+        }
+        else{
+            $('.main_left_menu').removeClass('active');
+        }
+        if(scrollBottom < lastAnchor){
+            $('.footer_nav').removeClass('active ani_dis');
+        }
+        if($(window).scrollTop() == 0){
+            $('.footer_nav').addClass('ani');
+            $('.footer_nav').removeClass('ani_dis');
+        }
+        else{
+            $('.footer_nav').removeClass('ani');
+            $('.footer_nav').addClass('ani_dis');
+        }
+    });
+
 });
