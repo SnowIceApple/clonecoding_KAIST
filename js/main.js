@@ -39,12 +39,12 @@ $(document).ready(function(){
         $('#header').css('padding-bottom', 60 + 'px');
         $(this).children('.hidden_text').text('검색창 닫기');
         $('.all_menu_open a').children('.hidden_text').text('전체메뉴 열기');
-        $('body').addClass('fixed');
+        $('html, body').addClass('fixed');
         if($(this).hasClass('active') == false){
             $('.main_search').stop().slideUp(150);
             $('#header').css('padding-bottom', 0);
             $(this).children('.hidden_text').text('검색창 열기');
-            $('body').removeClass('fixed');
+            $('html, body').removeClass('fixed');
         }
     });
 
@@ -53,7 +53,7 @@ $(document).ready(function(){
         $('.main_search').stop().slideUp(150);
         $('#header').css('padding-bottom', 0);
         $('.main_search_btn a').children('.hidden_text').text('검색창 열기');
-        $('body').removeClass('fixed');
+        $('html, body').removeClass('fixed');
     });
 
     $('.main_search_close button').on('keydown', function(e){
@@ -77,9 +77,9 @@ $(document).ready(function(){
         $('#header').css('padding-bottom', 0);
         $(this).children('.hidden_text').text('전체메뉴 닫기');
         $('.main_search_btn a').children('.hidden_text').text('검색창 열기');
-        $('body').addClass('fixed');
+        $('html, body').addClass('fixed');
         if($(this).parent().hasClass('active') == false){
-            $('body').removeClass('fixed');
+            $('html, body').removeClass('fixed');
         }
     });
 
@@ -90,7 +90,7 @@ $(document).ready(function(){
         $('.main_search').stop().slideUp(150);
         $('#header').css('padding-bottom', 0);
         $('.all_menu_open a').children('.hidden_text').text('전체메뉴 열기');
-        $('body').removeClass('fixed');
+        $('html, body').removeClass('fixed');
     }); 
 
     $('.main_all_menu_close button').on('keydown', function(e){
