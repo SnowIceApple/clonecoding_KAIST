@@ -1,0 +1,11 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13 13">
+<g>
+	<circle fill="none" stroke="#AAAFB5" stroke-miterlimit="10" cx="2.5" cy="2.5" r="2"/>
+	<circle fill="none" stroke="#AAAFB5" stroke-miterlimit="10" cx="2.5" cy="10.5" r="2"/>
+	<circle fill="none" stroke="#AAAFB5" stroke-miterlimit="10" cx="10.5" cy="6.5" r="2"/>
+</g>
+<g>
+	<polygon fill="#AAAFB5" points="9.754,4.796 4.211,2.5 3.828,3.424 9.06,5.591 	"/>
+	<polygon fill="#AAAFB5" points="3.829,9.436 4.211,10.36 9.754,8.064 9.087,7.258 	"/>
+</g>
+</svg>

@@ -1,7 +1,6 @@
 html, body{
     width: 100%;
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
 body{
@@ -1104,7 +1103,7 @@ body.fixed .fixed_background{
 
 .footer{
     width: 100%;
-    padding: 45px 0;
+    padding: 60px 0 45px 0;
     background: #33404f;
 }
 
@@ -1157,8 +1156,11 @@ body.fixed .fixed_background{
     padding: 0 60px 0 22.5px;
     width: 210px;
     height: 100%;
-    background: #015eaa;
+    background: #015eaa url('../img/kasit_history.png') no-repeat;
+    background-position: right 20px center;
     box-sizing: border-box;
+    color: #fff;
+    font-size: 15px;
 }
 
 .ftn_floor1{
@@ -1167,7 +1169,12 @@ body.fixed .fixed_background{
     height: 100%;
 }
 
-.ftn_floor1 > li > button{
+.ftn_floor1 > li{
+    box-sizing: border-box;
+}
+
+.ftn_floor1 > li > a{
+    position: relative;
     width: 210px;
     height: 100%;
     padding: 0 60px 0 22.5px;
@@ -1175,16 +1182,175 @@ body.fixed .fixed_background{
     align-items: center;
     background: #083562;
     box-sizing: border-box;
+    color: #fff;
+    font-size: 15px;
+    border-right: 1px solid #214972;
+    transition: all .4s ease;
 }
 
-.footer_nav .go_top{
-
+.ftn_floor1 > li:last-child > a{
+    border-right: 0;
 }
 
-.footer_nav .go_top a{
+.ftn_floor1 > li.active > a{
+    width: 255px;
+    background: #004c98;
+}
+
+.ftn_btn_deco{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 12px;
+}
+
+.fbd_box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.fbd_box.deco::after{
+    display: block;
+    content: "";
+    position: absolute;
+    right: -1px;
+    top: -7px;
+    width: 9px;
+    height: 9px;
+    background: #083562 url('../img/icon_offen.png') center no-repeat;
+    padding: 0 0 2px 4px;
+    transform-origin: center;
+    transition: all .8s ease;
+    border-radius: 50%;
+}
+
+.ftn_floor1 > li > a:hover .fbd_box::after{
+    transform: rotate(180deg);
+}
+
+
+.fbd_box .line{
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background: #fff;
+    transition: all .3s ease;
+}
+
+
+.fbd_box .line:nth-child(1){
+    left: 0;
+    top: 0;
+}
+
+.ftn_floor1 > li > a:focus .fbd_box .line:nth-child(1),
+.ftn_floor1 > li > a:hover .fbd_box .line:nth-child(1){
+    top: -2px;
+}
+
+.fbd_box .line:nth-child(2){
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.fbd_box .line:nth-child(3){
+    left: 0;
+    bottom: 0;
+}
+
+.ftn_floor1 > li > a:focus .fbd_box .line:nth-child(3),
+.ftn_floor1 > li > a:hover .fbd_box .line:nth-child(3){
+    bottom: -2px;
+}
+
+.go_top{
+    position: relative;
+}
+
+.go_top::before{
+    display: block;
+    content: '';
+    position: absolute;
+    right: -7px;
+    bottom: -7px;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+}
+
+.footer_nav.active .go_top::before{
+    display: none;
+}
+
+.go_top button{
     display: block;
     width: 55px;
     height: 55px;
     background: #015eaa url('../img/icon_search_click.svg') center no-repeat;
     background-size: auto 40%;
+}
+
+.footer_sns_link{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer_sns_link ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0 45px;
+}
+
+.footer_sns_link ul li a{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: -1px;
+    font-size: 15px;
+}
+
+.footer_sns_link ul li:nth-child(1) a{
+    padding-right: 40px;
+    background: url('../img/icon_sns.svg') no-repeat;
+    background-position: right center;
+    background-size: auto 23.5px;
+}
+
+.footer_sns_link ul li:nth-child(2) a{
+    background: url('../img/footer_sns_3.svg') no-repeat;
+}
+
+.footer_sns_link ul li:nth-child(3) a{
+    background: url('../img/footer_sns_4.svg') no-repeat;
+}
+
+.footer_sns_link ul li:nth-child(4) a{
+    background: url('../img/footer_sns_1.svg') no-repeat;
+}
+
+.footer_sns_link ul li:nth-child(5) a{
+    background: url('../img/footer_sns_2.svg') no-repeat;
+}
+
+.footer_sns_link ul li:first-child a span{
+    margin: 5px 0;
+}
+
+.footer_sns_link ul li:not(:first-child) a{
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: auto 23.5px;
 }

@@ -124,4 +124,16 @@ $(document).ready(function(){
         }
     });
 
+    $('.ftn_floor1 > li > a').on('click', function(e){
+        e.preventDefault();
+        $(this).parent('li').toggleClass('active').siblings('li').removeClass('active');
+    });
+
+    $('.go_top button').on('click', function(){
+        $('html, body').animate({
+            scrollTop: 0,
+        }, 500);
+        $('.logo a').focus();
+    });
+
 });
