@@ -1301,6 +1301,7 @@ body.fixed .fixed_background{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .footer_sns_link ul{
@@ -1353,4 +1354,38 @@ body.fixed .fixed_background{
     height: 30px;
     background-position: center;
     background-size: auto 23.5px;
+}
+
+.footer_inner_link{
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.footer_inner_link ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 20px;
+}
+
+.footer_inner_link ul li a{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: -1px;
+    font-weight: 500;
+}
+
+.footer_bot{
+    width: 100%;
+}
+
+.footer_bot *{
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.footer_bot address{
+    margin-bottom: 10px;
 }
