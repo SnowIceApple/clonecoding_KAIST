@@ -10,6 +10,12 @@ $(document).ready(function(){
         $('.mn_floor1 > li').removeClass('active');
     });
 
+    $(document).on('click', function(e){
+        if($(e.target).closest('.mn_floor2').length == 0){
+            $('.mn_floor1 > li').removeClass('active');
+        }
+    });
+
     $('.mn_floor1 > li').first().children('.mn_floor1 > li > a').on('keydown', function(e){
         if(e.shiftKey && e.key === 'Tab'){
             $('.mn_floor1 li').removeClass('active'); 
