@@ -73,6 +73,7 @@
         position: relative;
         left: 0;
         width: 100%;
+        top: 0;
     }
 
     .main_left_menu{
@@ -82,7 +83,7 @@
     #main_right{
         width: 100%;
         box-sizing: border-box;
-        padding: 0 50px;
+        padding: 0 5%;
     }
 
     .footer_nav{
@@ -104,6 +105,10 @@
 
     .ftn_megamenu{
         bottom: 47px;
+    }
+
+    .ftn_floor3 > li > a span{
+        font-size: 14px;
     }
 
     .go_top button{
@@ -137,4 +142,152 @@
     .footer_bot *{
         font-size: 13.5px;
     }
+}
+
+@media screen and (max-width: 768px){
+
+    .main_left_search{
+        max-width: 100%;
+    }
+
+    .main_article{
+        width: 100% !important;
+    }
+
+    .footer{
+        position: relative;
+        padding: 60px 0 120px 0;
+    }
+
+    .footer_nav{
+        padding: 0;
+        bottom: 0;
+    }
+    
+    .footer_inner_link ul{
+        gap: 6px;
+    }
+
+    .footer_inner_link ul li{
+        width: calc(50% - 3px);
+    }
+
+    .footer_inner_link ul li a{
+        font-size: 16px;
+        padding: 18px 0;
+    }
+
+    .footer_nav.active .go_top{
+        display: none;
+    }
+
+    #ft_nav{
+        width: 100%;
+    }
+
+    .footer_nav{
+        height: 52px;
+    }
+
+    .ftn_floor1{
+        width: 100%;
+    }
+
+    .ftn_floor1 > li{
+        width: calc(33.3333%);
+    }
+
+    .ftn_floor1 > li > a{
+        width: 100%;
+    }
+
+    .ftn_floor1 > li.active > a{
+        width: 100%;
+    }
+
+    .ftn_megamenu{
+        height: 300px;
+        overflow: auto;
+    }
+
+    .go_top{
+        position: absolute;
+        bottom: 612px;
+        right: 32px;
+    }
+
+    .go_top::before{
+        display: none;
+    }
+
+    .go_top button{
+        position: relative;
+        border-radius: 50%;
+        width: 54px;
+        height: 54px;
+    }
+
+    .go_top button::before{
+        display: block;
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 83px;
+        height: 83px;
+        background: #015eaa;
+        opacity: 0.25;
+        border-radius: 50%;
+    }
+
+    .footer_bot{
+
+    }
+}
+
+@media screen and (max-width: 568px) {
+
+    .footer_inner_link ul li a{
+        font-size: 12.5px;
+        padding: 14px 0;
+    }
+
+    .footer_nav{
+        height: 41px;
+    }
+
+    .ftn_floor1 > li > a{
+        font-size: 11.5px;
+        padding: 0 60px 0 18px;
+    }
+
+    .ftn_megamenu{
+        bottom: 41px;
+    }
+
+    .go_top{
+        bottom: 540px;
+    }
+
+    .go_top button{
+        width: 40px;
+        height: 40px;
+    }
+
+    .go_top button::before{
+        width: 65px;
+        height: 65px;
+    }
+
+    .footer_bot{
+        box-sizing: border-box;
+        padding: 0 25px;
+    }
+
+    .footer_bot *{
+        font-size: 10.5px;
+        letter-spacing: -0.5px;
+    }
+    
 }
