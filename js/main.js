@@ -155,6 +155,28 @@ $(document).ready(function(){
         $('.logo a').focus();
     });
 
+    $('.mob_nav_open a').on('click', function(e){
+        e.preventDefault();
+        $('#mob_nav').addClass('active');
+        $('#mob_nav').show();
+    });
+
+    $('.mob_nav_close').on('click', function(){
+        $('#mob_nav').removeClass('active');
+        setTimeout(() => {
+            $('#mob_nav').hide();
+        }, 300);
+    });
+
+    $('.mnl_floor_open button').on('click', function(){
+        $(this).closest('li').toggleClass('active');
+        $(this).closest('li').siblings().removeClass('active');
+        $('.mnl_floor2').stop().slideUp(300);
+        if($(this).closest('li').hasClass('active')){
+            $(this).closest('li').children('.mnl_floor2').stop().slideDown(300);
+        }
+    });
+
 });
 
 $(window).on('load', function(){

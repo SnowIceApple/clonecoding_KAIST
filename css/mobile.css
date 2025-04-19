@@ -1,0 +1,140 @@
+
+@media screen and (max-width: 1240px){
+
+    #nav{
+        margin-left: -150px;
+    }
+
+    .mn_floor1 > li > a{
+        font-size: 14px;
+        padding: 0 19px;
+        letter-spacing: 0;
+    }
+}
+
+@media screen and (max-width: 1300px){
+
+    .footer_inner_link{
+        box-sizing: border-box;
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    #content_box{
+        padding-left: 0px;
+    }
+
+    #left_link{
+        display: none;
+    }
+
+    .header{
+        height: 75px;
+    }
+
+    .logo{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+
+    .logo a img{
+        height: 22px;
+    }
+
+    #nav{
+        display: none;
+    }
+
+    .header_util > ul > li > a > span{
+        display: none;
+    }
+
+    .all_menu_open{
+        display: none;
+    }
+
+    .mob_nav_open{
+        display: flex;
+    }
+
+    #mob_nav.active{
+    }
+
+    #main_left,
+    #main_right{
+        width: 100%;
+    }
+
+    .main_left_content{
+        position: relative;
+        left: 0;
+        width: 100%;
+    }
+
+    .main_left_menu{
+        display: none;
+    }
+
+    #main_right{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 50px;
+    }
+
+    .footer_nav{
+        height: 47px;
+    }
+
+    .history_link{
+        display: none;
+    }
+
+    .footer_nav{
+        padding: 0 65px;
+    }
+
+    .ftn_floor1 > li > a{
+        width: 190px;
+        font-size: 13.5px;
+    }
+
+    .ftn_megamenu{
+        bottom: 47px;
+    }
+
+    .go_top button{
+        width: 47px;
+        height: 47px;
+    }
+
+    .footer_inner_link{
+        padding: 0 25px;
+    }
+
+    .footer_inner_link ul{
+        width: 100%;
+        gap: 3px;
+        justify-content: flex-start;
+    }
+
+    .footer_inner_link ul li{
+        width: calc(20% - 3px);
+    }
+
+    .footer_inner_link ul li a{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 15px 0;
+        box-sizing: border-box;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .footer_bot *{
+        font-size: 13.5px;
+    }
+}
