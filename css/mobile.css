@@ -154,6 +154,14 @@
         width: 100% !important;
     }
 
+    .main_article_floor:first-of-type .main_article.wide .main_article_date{
+        display: none;
+    }
+
+    .main_article_floor:not(:first-of-type) .main_article.wide .main_article_txt{
+        width: 100%;
+    }
+
     .footer{
         position: relative;
         padding: 60px 0 120px 0;
