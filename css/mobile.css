@@ -108,7 +108,9 @@
     }
 
     .ftn_floor3 > li > a span{
-        font-size: 14px;
+        font-size: max(2.5vw, 11px);
+        padding: 7px 8px 7px 0;
+        box-sizing: border-box;
     }
 
     .go_top button{
@@ -154,12 +156,20 @@
         width: 100% !important;
     }
 
+    .main_article:not(.wide) .main_article_date{
+    }
+
     .main_article_floor:first-of-type .main_article.wide .main_article_date{
         display: none;
     }
 
     .main_article_floor:not(:first-of-type) .main_article.wide .main_article_txt{
         width: 100%;
+    }
+
+    .main_article_floor:not(:first-of-type) .main_article.wide .main_article_date{
+        width: 100%;
+        justify-content: flex-start;
     }
 
     .footer{
@@ -216,6 +226,7 @@
     .ftn_megamenu{
         height: 300px;
         overflow: auto;
+        padding: 25px 35px;
     }
 
     .go_top{
